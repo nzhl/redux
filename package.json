@@ -1,0 +1,20 @@
+{
+  "name": "Redux",
+  "version": "1.0.0",
+  "description": "Learning Redux by actually implementing it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nzhl/Redux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nzhl/Redux/issues"
+  },
+  "homepage": "https://github.com/nzhl/Redux#readme"
+}
