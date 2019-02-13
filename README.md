@@ -30,4 +30,5 @@ Strongly recommend the following video, which makes it easy to better understand
 ## Reference
 
 [Get Started with Redux](https://www.bilibili.com/video/av7643390) -- 原作者的视频
+
 [Vuex、Flux、Redux、Redux-saga、Dva、MobX](https://zhuanlan.zhihu.com/p/53599723) -- 可着重看关于redux处理异步的部分
