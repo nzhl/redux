@@ -27,6 +27,16 @@ Strongly recommend the following video, which makes it easy to better understand
 3. reducers are called when actions are dispatched
 4. Actions are dispatched when UI receives users' behaviour
 
+
+### React-Redux
+Using props to pass store explicitly => Using provider/context to pass store implicitly ( This brings quite a log redudant template code ) => To remove those template code => That's where React-Redux plays a role !!!
+
+connect: (mapStateToProps, mapDispatchToProps) => PresentationalComponent => LogicComponent
+  + mapStateToProps: (stateFromStore, ownProps?) => dataPropsMap
+  + mapDispatchToProps 
+    - function: (dispatch) => handlerPropsMap
+    - object: handlerPropsMap
+
 ## Reference
 
 [Get Started with Redux](https://www.bilibili.com/video/av7643390) -- 原作者的视频
