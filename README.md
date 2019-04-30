@@ -36,6 +36,28 @@ connect: (mapStateToProps, mapDispatchToProps) => PresentationalComponent => Log
   + mapDispatchToProps 
     - function: (dispatch) => <props, () => dispatch(action)>map
     - object: <props, () => action>map
+    
+### React-Redux-Thunk
+After using middleware to enhance redux's dispatch function, actions which can only be plain JavasSript object is no longer limited by this rule. You are free to pass an action which is a function in this form
+  ```js
+  // action can be a function
+  (dispatch) => {
+  
+    // give user a hint to wait
+    dispatch({
+      type: REQUEST_SENT
+    })
+    
+    return fetch('api-address').then((data) => {
+      // remove the waiting hint and update the page
+      dispatch({
+        type: RESPONSE_RECEIVED,
+        payload: data
+      })
+    })
+  }
+  ```
+
 
 ## Reference
 
