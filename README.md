@@ -32,10 +32,10 @@ Strongly recommend the following video, which makes it easy to better understand
 Using props to pass store explicitly => Using provider/context to pass store implicitly ( This brings quite a log redudant template code ) => To remove those template code => That's where React-Redux plays a role !!!
 
 connect: (mapStateToProps, mapDispatchToProps) => PresentationalComponent => LogicComponent
-  + mapStateToProps: (stateFromStore, ownProps?) => dataPropsMap
+  + mapStateToProps: (stateFromStore, ownProps?) => dataToPropsMap
   + mapDispatchToProps 
-    - function: (dispatch) => handlerPropsMap
-    - object: handlerPropsMap
+    - function: (dispatch) => <props, () => dispatch(action)>map
+    - object: <props, () => action>map
 
 ## Reference
 
