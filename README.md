@@ -57,6 +57,10 @@ After using middleware to enhance redux's dispatch function, actions which can o
     })
   }
   ```
+  
+  思考: 实际不引入thunk仅仅利用mapDispatchToProps的函数形式, 也能实现异步, 那么为什么我们还需要react-redux-thunk?
+  详见: https://codesandbox.io/s/pp55734v5q?fontsize=14
+  解释: http://www.xiaojichao.com/post/why-do-we-need-middleware-for-async-flow-in-redux.html
 
 
 ## Reference
