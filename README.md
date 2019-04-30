@@ -10,7 +10,7 @@ Strongly recommend the following video, which makes it easy to better understand
 2. Read-only state. The only way to change the state is to emit an `action`, an object describing what happened.
 3. All changes are made by pure function. Pure `reducer` is responsible to create a new state based on previousState and `action`.
 
-### Commonly Used API (Part of, not all)
+### Commonly Used API (some of it, not all)
 
 #### Top Level API
 1. createStore(reducer): create a store 
@@ -58,9 +58,9 @@ After using middleware to enhance redux's dispatch function, actions which can o
   }
   ```
   
-  思考: 实际不引入thunk仅仅利用mapDispatchToProps的函数形式, 也能实现异步, 那么为什么我们还需要react-redux-thunk?
-  详见: https://codesandbox.io/s/pp55734v5q?fontsize=14
-  解释: 1. 代码模块化的角度来看: http://www.xiaojichao.com/post/why-do-we-need-middleware-for-async-flow-in-redux.html
+  - 思考: 实际不引入thunk仅仅利用mapDispatchToProps的函数形式, 也能实现异步, 那么为什么我们还需要react-redux-thunk?
+  - 详见: https://codesandbox.io/s/pp55734v5q?fontsize=14
+  - 解释: 1. 代码模块化的角度来看: http://www.xiaojichao.com/post/why-do-we-need-middleware-for-async-flow-in-redux.html
        2. 功能性的角度来看, mapDispatchToProps实现中无法实时获取到UI当前的状态, 而在thunk支持action是一个function, 形式是`(dispatch, getState) => {}`, 可以通过这个getState来处理随时可能出现的变化. 例如, 用户点击按钮下订单, 此时表单提交, 页面显示订单提交中. 如果此时需要提供一个功能, 提交过程中用户可以取消订单, 那么使用第一种方式可能无法处理. 而使用thunk的话, 可以考虑在数据返回后页面更新前使用getState查询一次当前页面的状态, 此时会发现用户已经取消了订单. 那么页面实际无需更新, 另一方面可以在处理函数中再次发送请求去实际取消该订单.
 
 
