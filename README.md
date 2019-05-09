@@ -41,7 +41,7 @@ connect: (mapStateToProps, mapDispatchToProps) => PresentationalComponent => Log
 After using middleware to enhance redux's dispatch function, actions which can only be plain JavasSript object is no longer limited by this rule. You are free to pass an action which is a function in this form
   ```js
   // action can be a function
-  (dispatch) => {
+  (dispatch, getState) => {
   
     // give user a hint to wait
     dispatch({
